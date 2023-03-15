@@ -1,26 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <TheHeader><img id="logo" :src="logo" alt="Logo firmy sdx" /></TheHeader>
+  <TheMain />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TheMain from "./components/layout/TheMain.vue";
+import Logo from "./assets/images/sdworx_logo.png";
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    TheMain
+  },
+  data() {
+    return {
+      logo: Logo,
+    };
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  background-color: #f8f9fb;
+  font-family: "Roboto", sans-serif;
+}
+#logo {
+  margin-top: 1em;
+  margin-left: 1em;
 }
 </style>
